@@ -1,7 +1,11 @@
-<!DOCTYPE html><html>  <head>    <title>Load External Page in Modal</title>    <style>      table {
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Load External Page in Modal</title>
+    <style>
+      table {
         border-collapse: collapse;
         width: 100%;
-        max-width: 800px;
         margin: auto;
         font-family: Arial, sans-serif;
         font-size: 14px;
@@ -17,7 +21,7 @@
       }
       button {
         display: block;
-        margin: 20px auto;
+        margin: 20px 5px;
         padding: 8px 16px;
         background-color: #4caf50;
         color: white;
@@ -39,6 +43,7 @@
         overflow: auto;
         background-color: rgba(0, 0, 0, 0.4);
       }
+
       .modal-content {
         background-color: #fefefe;
         margin: auto;
@@ -50,6 +55,7 @@
         animation-name: modalopen;
         animation-duration: 0.4s;
       }
+
       @keyframes modalopen {
         from {
           opacity: 0;
@@ -58,24 +64,133 @@
           opacity: 1;
         }
       }
+
       .close {
-        color: #aaa;
+        color: red;
         float: right;
-        font-size: 28px;
+        font-size: 29px;
         font-weight: bold;
+        transform: translate(0px, -35px);
+        background: white;
+        padding: 0px 10px;
+        border: 1px solid darkgray;
+        border-radius: 4px;
       }
+
       .close:hover,
       .close:focus {
         color: black;
         text-decoration: none;
         cursor: pointer;
       }
-    </style>  </head>  <body>    <h1>Vehicle Maintenance</h1>    <button id="openModalBtn" type="submit">Submit</button>    <table>      <thead>        <tr>          <th>Action</th>          <th>Vehicle</th>          <th>Odometer</th>          <th>Service Due</th>        </tr>      </thead>      <tbody>        <tr>          <td><input type="checkbox" id="1" /></td>          <td>2018 Toyota Corolla</td>          <td>50,000 km</td>          <td>Oil change, brake pads</td>        </tr>        <tr>          <td><input type="checkbox" id="2" /></td>          <td>2019 Honda Civic</td>          <td>20,000 km</td>          <td>Tire rotation, air filter</td>        </tr>        <tr>          <td><input type="checkbox" id="3" /></td>          <td>2020 Ford Mustang</td>          <td>10,000 km</td>          <td>Oil change, coolant flush</td>        </tr>        <tr>          <td><input type="checkbox" id="4" /></td>          <td>2021 Toyota Innova</td>          <td>24,000 km</td>          <td>Engine issues</td>        </tr>        <tr>          <td><input type="checkbox" id="5" /></td>          <td>2021 Tata Punch</td>          <td>16,000 km</td>          <td>Manual gear transmision</td>        </tr>        <tr>          <td><input type="checkbox" id="6" /></td>          <td>2020 Hyundai creta</td>          <td>32,000 km</td>          <td>Oil change</td>        </tr>      </tbody>    </table>    <div id="myModal" class="modal">      <div class="modal-content">        <span class="close">&times;</span>        <iframe
+    </style>
+  </head>
+  <body>
+    <h1>Vehicle Maintenance</h1>
+    <div><button id="openModalBtn" type="submit">Submit</button></div>
+    <table>
+      <thead>
+        <tr>
+          <th>Action</th>
+          <th>Vehicle</th>
+          <th>Odometer</th>
+          <th>Service Due</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><input type="checkbox" id="1" /></td>
+          <td>2018 Toyota Corolla</td>
+          <td>50,000 km</td>
+          <td>Oil change, brake pads</td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" id="2" /></td>
+          <td>2019 Honda Civic</td>
+          <td>20,000 km</td>
+          <td>Tire rotation, air filter</td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" id="3" /></td>
+          <td>2020 Ford Mustang</td>
+          <td>10,000 km</td>
+          <td>Oil change, coolant flush</td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" id="4" /></td>
+          <td>2021 Toyota Innova</td>
+          <td>24,000 km</td>
+          <td>Engine issues</td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" id="5" /></td>
+          <td>2021 Tata Punch</td>
+          <td>16,000 km</td>
+          <td>Manual gear transmision</td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" id="6" /></td>
+          <td>2020 Hyundai creta</td>
+          <td>32,000 km</td>
+          <td>Oil change</td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" id="7" /></td>
+          <td>2013 Hyundai i10</td>
+          <td>10,000 km</td>
+          <td>brake pads</td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" id="8" /></td>
+          <td>2019 Honda Jazz</td>
+          <td>17,000 km</td>
+          <td>air filter</td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" id="9" /></td>
+          <td>2020 Toyota Fortuner</td>
+          <td>34,000 km</td>
+          <td>Oil change, coolant flush</td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" id="10" /></td>
+          <td>2021 Wolkswagon Taigun</td>
+          <td>24,000 km</td>
+          <td>Engine issues</td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" id="11" /></td>
+          <td>2017 Renault Duster</td>
+          <td>56,000 km</td>
+          <td>Manual gear transmision</td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" id="12" /></td>
+          <td>2020 Mahindra Thar</td>
+          <td>22,000 km</td>
+          <td>Oil change</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <iframe
           id="modal-iframe"
           width="100%"
           height="85%"
           frameborder="0"
-        ></iframe>        <button id="modal-submit" type="submit">Submit</button>      </div>    </div>    <script>      const vehicleData = [
+        ></iframe>
+        <div class="button-tray">
+          <button id="modal-submit" type="submit">Next &nbsp; &rArr;</button>
+          <button id="modal-back" type="submit">&lArr; &nbsp; Back</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const vehicleData = [
         {
           id: 1,
           vehicle: "2018 Toyota Corolla",
@@ -112,55 +227,115 @@
           odometer: "32,000 km",
           serviceDue: "Oil change",
         },
+        {
+          id: 7,
+          vehicle: "2013 Hyundai i10",
+          odometer: "10,000 km",
+          serviceDue: "Brake pads",
+        },
+        {
+          id: 8,
+          vehicle: "2019 Honda Civic2019 Honda Jazz",
+          odometer: "17,000 km",
+          serviceDue: "Air filter",
+        },
+        {
+          id: 9,
+          vehicle: "2020 Toyota Fortuner",
+          odometer: "34,000 km",
+          serviceDue: "Oil change, coolant flush",
+        },
+        {
+          id: 10,
+          vehicle: "2021 Wolkswagon Taigun",
+          odometer: "24,000 km",
+          serviceDue: "Engine issues",
+        },
+        {
+          id: 11,
+          vehicle: "2017 Renault Duster",
+          odometer: "56,000 km",
+          serviceDue: "Manual gear transmision",
+        },
+        {
+          id: 12,
+          vehicle: "2020 Mahindra Thar",
+          odometer: "22,000 km",
+          serviceDue: "Oil change",
+        },
       ];
       // Get the modal
       var modal = document.getElementById("myModal");
+
       // Get the <span> element that closes the modal
       var closeBtn = modal.querySelector(".close");
+
       // Get the button that opens the modal
       var openBtn = document.getElementById("openModalBtn");
+
       // Get the button present in the modal
       var modalBtn = document.getElementById("modal-submit");
+
       // Get the modal's iframe
       var modalIframe = modal.querySelector("#modal-iframe");
+
+      var modalBack = modal.querySelector("#modal-back");
+
       // When the user clicks on the button, open the modal
-      openBtn.onclick = function () {
+      openBtn.onclick = openListPage;
+
+      modalBack.onclick = openListPage;
+
+      function openListPage() {
         // Set the URL of the iframe to the external page's URL
-        modalIframe.src = "https://9912353870.github.io/PocHtml/"; //"http://127.0.0.1:5500/POC/test.html"; //"https://www.dev.msbsmp.com/vehicles";
-        //modalIframe.src = "http://127.0.0.1:5500/POC/test.html"; 
+        modalIframe.src = "https://9912353870.github.io/PocHtml/"; 
+        //"http://127.0.0.1:5500/POC/test.html"; //"https://www.dev.msbsmp.com/vehicles";
+
+        //modalIframe.src = "http://127.0.0.1:5500/POC/test.html";
+
         //var myData = { param1: "value1", param2: "value2" };
         let checkedIds = getCheckedBoxes() || [];
-        let filteredData = vehicleData.filter((item) =>          checkedIds.includes(item.id.toString())
+
+        let filteredData = vehicleData.filter((item) =>
+          checkedIds.includes(item.id.toString())
         );
+
         modalIframe.addEventListener("load", function () {
           //Using postMessage service
           modalIframe.contentWindow.postMessage(filteredData, "*");
         });
+
         //Using browser's localstorage
         localStorage.setItem("selectedVehicles", JSON.stringify(filteredData));
+
         // Show the modal
         modal.style.display = "block";
-      };
+      }
+
       modalBtn.onclick = function () {
         // Set the URL of the iframe to the external page's URL
-        modalIframe.src = "https://9912353870.github.io/PocHtml/page3.html"; //"https://www.dev.msbsmp.com/vehicles";
+        modalIframe.src = "https://9912353870.github.io/PocHtml/services.html"; //"https://9912353870.github.io/PocHtml/page3.html"; //"https://www.dev.msbsmp.com/vehicles";
         let checkedIds = getCheckedBoxes() || [];
-        let filteredData = vehicleData.filter((item) =>          checkedIds.includes(item.id.toString())
+        let filteredData = vehicleData.filter((item) =>
+          checkedIds.includes(item.id.toString())
         );
         modalIframe.addEventListener("load", function () {
           modalIframe.contentWindow.postMessage(filteredData, "*");
         });
       };
+
       // When the user clicks on <span> (x), close the modal
       closeBtn.onclick = function () {
         modal.style.display = "none";
       };
+
       // When the user clicks anywhere outside of the modal, close it
       window.onclick = function (event) {
         if (event.target == modal) {
           modal.style.display = "none";
         }
       };
+
       function getCheckedBoxes() {
         var checkboxes = document.querySelectorAll(
           "input[type=checkbox]:checked"
@@ -176,4 +351,6 @@
         // Return the array if it is non-empty, or null
         return checkboxesChecked.length > 0 ? checkboxesChecked : null;
       }
-    </script>  </body></html>
+    </script>
+  </body>
+</html>
